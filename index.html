@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!--Skapa en array med namnet “pets” som har 3 tomma object som items.
+        Lägg till 3 properties i varje object: “species”, “name” och “birthyear”. Ge valfria värden till dessa properties.
+        Logga ut arrayen i console
+        Använd metoden “filter” på pets-arrayen för att filtrera ut husdjur som är födda efter 2019 och logga ut dem.
+        Använd metoden “map” på pets-arrayen för att skapa en ny array med bara husdjurens namn.
+        Logga ut arrayen igen-->
+            <h1>Lektion 4 JS</h1>
+        <script>
+            let pets =[{name: "Missy", species: "cat", birthyear: 2020},
+            {name: "Miyagi", species: "fish", birthyear: 2005},
+            {name: "Catty", species: "cat", birthyear: 1995},
+            ];
+            console.log(pets);
+
+          
+            let year19= pets.filter(year2019);
+            function year2019(x){
+                return x.birthyear >2019
+            };
+            console.log(year19);
+
+            let name1 = pets.map(namePets);
+            function namePets(x){
+                return x.name
+            };
+            console.log(name1);
+
+
+            //join
+            let nature =  ['Stone', 'Tree', 'water'];
+            console.log(nature.join('-'));
+            
+            //fill
+            let numb1 = [1, 2, 6, 5];
+            console.log(numb1.fill(5));
+
+            //find
+            const arr1 = [5, 5, 8, 6];
+            const find1 = arr1.find(element => element >5);
+            console.log(find1);
+            
+        </script>
+
+        <!--<script>
+            let cats = [
+                {name: 'Svartis', species: 'cat', birthyear: 2022 },
+                {name: 'Smulan', species: 'cat', birthyear: 2005 },
+                {name: 'Zacke', species: 'cat', birthyear: 1994},
+            ];
+            console.log(cats);
+
+            let filter19 = pets.filter(filter19Funk);
+            function filter19Funk (year){
+                return year.birthyear >2019
+            };
+            console.log(filter19)
+        </script>-->
+    </head>
+</html>
